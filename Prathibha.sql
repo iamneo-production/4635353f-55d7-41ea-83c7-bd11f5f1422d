@@ -12,7 +12,7 @@ MIN(cast(regexp_replace(withdrawal_amt,:MY_PRTB,'')as number)) as lowestestDebit
 from bank_transaction
 where WITHDRAWAL_AMT is not null
 group by extract(year from "DATE") order by extract(year from "DATE");
---THIRD
+--THIRDD
 select year, FifthHighestAmount
 from(
     select
