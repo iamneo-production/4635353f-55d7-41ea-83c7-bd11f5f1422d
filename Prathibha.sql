@@ -1,6 +1,6 @@
 VARIABLE MY_PRTB VARCHAR2(10);
 EXEC :MY_PRTB := '[^0-9.]';
---FIRSTT 
+--FIRST
 select extract(year from "DATE") as Year ,
 max(cast(regexp_replace(withdrawal_amt,:MY_PRTB,'')as number)) as HighestDebitedAmount
 from bank_transaction
