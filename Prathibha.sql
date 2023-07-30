@@ -11,7 +11,7 @@ select extract(year from "DATE") as Year ,
 MIN(cast(regexp_replace(withdrawal_amt,:MY_PRTB,'')as number)) as lowestestDebitedAmount
 from bank_transaction
 where WITHDRAWAL_AMT is not null
-group by extract(year from "DATE") order by extract(year from "DATE");
+group by extract(year from "DATE") order by extract(year from "DATE") ASC;
 --THIRDD
 select year, FifthHighestAmount
 from(
