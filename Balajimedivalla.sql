@@ -1,6 +1,8 @@
 --Answers--
+
 VARIABLE MY_CON VARCHAR2(10);
 EXEC :MY_CON:='[^0-9.]';
+
 --Answer for first query a and outputt
 SELECT EXTRACT(YEAR FROM "DATE") AS YEAR,
 MAX(CAST(REGEXP_REPLACE(WITHDRAWAL_AMT,:MY_CON,'') AS NUMBER)) AS HighestDebiteddAmount
